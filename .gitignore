@@ -106,3 +106,13 @@ install_manifest.txt
 *.db-shm
 *.db-wal
 compile_commands.json
+
+# IDE trashes
+Debug/
+cmake-build-debug/
+examples/bidder/data/ads
+examples/bidder/data/campaign_budget
+examples/bidder/data/geo_campaign
+examples/bidder/data/ico_ads
+examples/bidder/data/ico_campaign
+examples/bidder/data/ico_domains

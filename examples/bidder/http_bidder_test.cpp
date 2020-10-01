@@ -53,9 +53,9 @@ int main(int argc, char *argv[]) {
     BidderConfig config([](bidder_config_data &d, boost::program_options::options_description &desc){
         desc.add_options()
             ("bidder.log", boost::program_options::value<std::string>(&d.log_file_name), "bidder_test log file name log")
-            ("bidder.ads_source", boost::program_options::value<std::string>(&d.ads_source)->default_value("data/ads"), "ads_source file name")
+            ("bidder.ads_source", boost::program_options::value<std::string>(&d.ads_source)->default_value("/home/sajith/adtech/github/vanilla-rtb/examples/bidder/data/ads"), "ads_source file name")
             ("bidder.ads_ipc_name", boost::program_options::value<std::string>(&d.ads_ipc_name)->default_value("vanilla-ads-ipc"), "ads ipc name")
-            ("bidder.geo_source", boost::program_options::value<std::string>(&d.geo_source)->default_value("data/geo"), "geo_source file name")
+            ("bidder.geo_source", boost::program_options::value<std::string>(&d.geo_source)->default_value("/home/sajith/adtech/github/vanilla-rtb/examples/bidder/data/geo"), "geo_source file name")
             ("bidder.geo_ipc_name", boost::program_options::value<std::string>(&d.geo_ipc_name)->default_value("vanilla-geo-ipc"), "geo ipc name")
             ("bidder.port", boost::program_options::value<short>(&d.port)->required(), "bidder port")
             ("bidder.host", boost::program_options::value<std::string>(&d.host)->default_value("0.0.0.0"), "bidder host")
@@ -63,9 +63,9 @@ int main(int argc, char *argv[]) {
             ("bidder.timeout", boost::program_options::value<int>(&d.timeout), "bidder_test timeout")
             ("bidder.concurrency", boost::program_options::value<unsigned int>(&d.concurrency)->default_value(0), "bidder concurrency, if 0 is set std::thread::hardware_concurrency()")
             ("bidder.geo_campaign_ipc_name", boost::program_options::value<std::string>(&d.geo_campaign_ipc_name)->default_value("vanilla-geo-campaign-ipc"), "geo campaign ipc name")
-            ("bidder.geo_campaign_source", boost::program_options::value<std::string>(&d.geo_campaign_source)->default_value("data/geo_campaign"), "geo_campaign_source file name")
+            ("bidder.geo_campaign_source", boost::program_options::value<std::string>(&d.geo_campaign_source)->default_value("/home/sajith/adtech/github/vanilla-rtb/examples/bidder/data/geo_campaign"), "geo_campaign_source file name")
             ("campaign-manager.ipc_name", boost::program_options::value<std::string>(&d.ipc_name)->default_value("vanilla-campaign-budget-ipc"),"campaign_budget IPC name")
-            ("campaign-manager.budget_source", boost::program_options::value<std::string>(&d.campaign_budget_source)->default_value("data/campaign_budget"),"campaign_budget source file name")
+            ("campaign-manager.budget_source", boost::program_options::value<std::string>(&d.campaign_budget_source)->default_value("/home/sajith/adtech/github/vanilla-rtb/examples/bidder/data/campaign_budget"),"campaign_budget source file name")
             ("bidder.key_value_host", boost::program_options::value<std::string>(&d.key_value_host)->default_value("0.0.0.0"), "key value storage host")
             ("bidder.key_value_port", boost::program_options::value<int>(&d.key_value_port)->default_value(0), "key value storage port")
         ;
